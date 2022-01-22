@@ -11,20 +11,30 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="pageStyles.css" />
-    <title>Portfolio wbesite</title>
+    <title>Vanilla website</title>
   </head>
   <body>
     <div class="background background-animation"></div>
     <div class="navigation-container">
       <nav>
         <ul>
-          <div class="nav-link">Home</div>
-          <div class="nav-link">Link2</div>
+          <div href="/" class="nav-link">Home</div>
+          <div href="" class="nav-link">Link2</div>
           <div href="" class="nav-link">Link3</div>
           <div href="" class="nav-link">Link4</div>
           <div class="nav-highlighter"></div>
         </ul>
+
+        <input list="browsers" name="browser" id="browser" />
+        <datalist id="browsers">
+          <option value="Edge"></option>
+          <option value="Firefox"></option>
+          <option value="Chrome"></option>
+          <option value="Opera"></option>
+          <option value="Safari"></option>
+        </datalist>
       </nav>
     </div>
+    <div>Some text</div>
   </body>
 </html>

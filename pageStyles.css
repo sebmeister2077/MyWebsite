@@ -11,6 +11,14 @@ body {
   font-size: 38px;
 }
 
+*::selection {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+div {
+  position: relative;
+}
+
 .background {
   background: linear-gradient(
     45deg,
@@ -87,13 +95,22 @@ nav ul {
   transition: color 0.5s, opacity 0.4s;
 }
 
+[href] {
+  cursor: pointer;
+  user-select: none;
+}
+
 .nav-link:hover {
   color: floralwhite;
   transition: color 0.5s 0.2s;
 }
 
 .nav-highlighter {
-  background: hsla(0, 9%, 7%, 0.3);
+  background: conic-gradient(
+    hsla(0, 14%, 93%, 0.15),
+    hsla(0, 9%, 7%, 0.3),
+    hsla(0, 14%, 93%, 0.15)
+  );
   box-shadow: 0px 0px 24px 1px #fffa;
   border-top-left-radius: 50%;
   border-top-right-radius: 50%;
@@ -102,7 +119,7 @@ nav ul {
   position: absolute;
   z-index: 1;
   bottom: 0px;
-  left: 30%;
+  left: 20px;
   transition: left 0.4s ease-in-out, opacity 0.4s 0.1s;
 }
 
@@ -124,4 +141,16 @@ nav ul {
 .nav-link:nth-child(4):hover ~ .nav-highlighter {
   left: 365px;
   opacity: 1;
+}
+
+input[list] {
+  background: hsla(0, 9%, 7%, 0.3);
+  border-radius: 14px;
+  color: #fffa;
+  border: none;
+  outline: none;
+}
+
+[list]::-webkit-calendar-picker-indicator {
+  opacity: 0;
 }
