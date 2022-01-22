@@ -7,8 +7,10 @@ body {
 }
 
 * {
-  font-family: Dongle;
-  font-size: 38px;
+  margin: 0;
+
+  font-family: Nunito;
+  font-size: 22px;
 }
 
 *::selection {
@@ -64,6 +66,9 @@ div {
   bottom: 12px;
   height: 54px;
 }
+.navigation-container:hover > nav .logo {
+  bottom: 12px;
+}
 
 nav {
   display: flex;
@@ -87,6 +92,16 @@ nav ul {
   padding-inline-start: 0px;
   list-style-type: none;
   transition: opacity 0.3s;
+}
+
+nav .github.logo {
+  width: 48px;
+  height: 48px;
+  position: absolute;
+  bottom: 24px;
+  right: 24px;
+  transition: bottom 0.4s;
+  cursor: pointer;
 }
 
 .nav-link {
@@ -133,7 +148,7 @@ nav ul {
 }
 
 .nav-link:nth-child(2):hover ~ .nav-highlighter {
-  left: 140px;
+  left: 134px;
   opacity: 1;
 }
 
@@ -143,7 +158,7 @@ nav ul {
 }
 
 .nav-link:nth-child(4):hover ~ .nav-highlighter {
-  left: 365px;
+  left: 362px;
   opacity: 1;
 }
 
@@ -158,7 +173,7 @@ input[list] {
   outline: none;
   padding-left: 8px;
   height: 0px;
-  width: 272px;
+  max-width: 272px;
   transition: bottom 0.4s, height 0.4s;
 }
 

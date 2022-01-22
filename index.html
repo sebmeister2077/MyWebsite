@@ -6,11 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Dongle:wght@300&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Nunito&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="pageStyles.css" />
+    <script type="text/javascript" src="/scripts/baseScripts.js" defer></script>
     <title>Vanilla website</title>
   </head>
   <body>
@@ -18,10 +21,10 @@
     <div class="navigation-container">
       <nav>
         <ul>
-          <div href="/" class="nav-link">Home</div>
-          <div href="" class="nav-link">Link2</div>
-          <div href="" class="nav-link">Link3</div>
-          <div href="" class="nav-link">Link4</div>
+          <a href="/" class="nav-link">Home</a>
+          <a href="there" class="nav-link">Link2</a>
+          <a href="" class="nav-link">Link3</a>
+          <a href="" class="nav-link">Link4</a>
           <div class="nav-highlighter"></div>
         </ul>
 
@@ -33,6 +36,12 @@
           <option value="Opera"></option>
           <option value="Safari"></option>
         </datalist>
+
+        <img
+          onclick="openGithub()"
+          src="/images/githubLogo.png"
+          class="github logo"
+        />
       </nav>
     </div>
     <div>Some text</div>
