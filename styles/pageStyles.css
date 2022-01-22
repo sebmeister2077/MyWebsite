@@ -56,7 +56,7 @@ body {
 nav {
   display: flex;
   align-items: center;
-  height: 20%;
+  height: 16px;
   background: linear-gradient(
     -45deg,
     rgba(255, 255, 255, 0.1),
@@ -95,34 +95,33 @@ nav ul {
 .nav-highlighter {
   background: hsla(0, 9%, 7%, 0.3);
   box-shadow: 0px 0px 24px 1px #fffa;
-  border-radius: 50%;
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
   aspect-ratio: 1/1;
-  height: 54px;
+  height: 72px;
   position: absolute;
   z-index: 1;
-  top: 50%;
-  transform: translateY(-50%);
+  bottom: 0px;
   left: 30%;
-  opacity: 0;
   transition: left 0.4s ease-in-out, opacity 0.4s 0.1s;
 }
 
 .nav-link:nth-child(1):hover ~ .nav-highlighter {
-  left: 18px;
+  left: 20px;
   opacity: 1;
 }
 
 .nav-link:nth-child(2):hover ~ .nav-highlighter {
-  left: 116px;
+  left: 140px;
   opacity: 1;
 }
 
 .nav-link:nth-child(3):hover ~ .nav-highlighter {
-  left: 214px;
+  left: 252px;
   opacity: 1;
 }
 
 .nav-link:nth-child(4):hover ~ .nav-highlighter {
-  left: 312px;
+  left: 365px;
   opacity: 1;
 }
