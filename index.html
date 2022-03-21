@@ -13,37 +13,17 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="pageStyles.css" />
-    <script type="text/javascript" src="/scripts/baseScripts.js" defer></script>
+    <script
+      type="text/javascript"
+      src="./scripts/baseScripts.js"
+      defer
+    ></script>
     <title>Vanilla website</title>
   </head>
   <body>
     <div class="background background-animation"></div>
-    <div class="navigation-container">
-      <nav>
-        <ul>
-          <a href="/" class="nav-link">Home</a>
-          <a href="there" class="nav-link">Link2</a>
-          <a href="" class="nav-link">Link3</a>
-          <a href="" class="nav-link">Link4</a>
-          <div class="nav-highlighter"></div>
-        </ul>
-
-        <input list="browsers" name="browser" id="browser" />
-        <datalist id="browsers">
-          <option value="Edge"></option>
-          <option value="Firefox"></option>
-          <option value="Chrome"></option>
-          <option value="Opera"></option>
-          <option value="Safari"></option>
-        </datalist>
-
-        <img
-          onclick="openGithub()"
-          src="/images/githubLogo.png"
-          class="github logo"
-        />
-      </nav>
+    <div class="navigation-container" id="root">
+      <script type="module" src="./index.js" defer></script>
     </div>
-    <div>Some text</div>
   </body>
 </html>

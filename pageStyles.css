@@ -36,6 +36,7 @@ div {
   height: 100vh;
   position: absolute;
   left: -100vw;
+  z-index: -1;
 }
 
 .background-animation {
@@ -54,112 +55,12 @@ div {
 .navigation-container {
   width: 100%;
   height: 78px;
-  position: relative;
-}
-.navigation-container:hover > nav {
-  height: 100%;
-}
-.navigation-container:hover > nav .nav-link {
-  opacity: 1;
-}
-.navigation-container:hover > nav [list] {
-  bottom: 12px;
-  height: 54px;
-}
-.navigation-container:hover > nav .logo {
-  bottom: 12px;
-}
-
-nav {
-  display: flex;
-  align-items: center;
-  height: 16px;
-  background: linear-gradient(
-    -45deg,
-    rgba(255, 255, 255, 0.1),
-    rgba(255, 255, 255, 0.2)
-  );
-  box-shadow: 0px 3px 12px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(1px);
-  transition: height 0.4s;
-}
-
-nav ul {
-  display: flex;
-  gap: 12px;
-  margin-block-end: 0em;
-  margin-block-start: 0em;
-  padding-inline-start: 0px;
-  list-style-type: none;
-  transition: opacity 0.3s;
-}
-
-nav .github.logo {
-  width: 48px;
-  height: 48px;
-  position: absolute;
-  bottom: 24px;
-  right: 24px;
-  transition: bottom 0.4s;
-  cursor: pointer;
-}
-
-.nav-link {
-  color: red;
-  z-index: 2;
-  padding: 12px 24px;
-  position: relative;
-  text-decoration: none;
-  opacity: 0;
-  transition: color 0.5s, opacity 0.4s;
+  position: fixed;
 }
 
 [href] {
   cursor: pointer;
   user-select: none;
-}
-
-.nav-link:hover {
-  color: floralwhite;
-  transition: color 0.5s 0.2s;
-}
-
-.nav-highlighter {
-  background: conic-gradient(
-    hsla(0, 14%, 93%, 0.15),
-    hsla(0, 9%, 7%, 0.3),
-    hsla(0, 14%, 93%, 0.15)
-  );
-  box-shadow: 0px 0px 24px 1px #fffa;
-  border-top-left-radius: 50%;
-  border-top-right-radius: 50%;
-  aspect-ratio: 1/1;
-  height: 72px;
-  position: absolute;
-  z-index: 1;
-  bottom: 0px;
-  left: 20px;
-  transition: left 0.4s, opacity 0.4s 0.1s;
-}
-
-.nav-link:nth-child(1):hover ~ .nav-highlighter {
-  left: 20px;
-  opacity: 1;
-}
-
-.nav-link:nth-child(2):hover ~ .nav-highlighter {
-  left: 134px;
-  opacity: 1;
-}
-
-.nav-link:nth-child(3):hover ~ .nav-highlighter {
-  left: 252px;
-  opacity: 1;
-}
-
-.nav-link:nth-child(4):hover ~ .nav-highlighter {
-  left: 362px;
-  opacity: 1;
 }
 
 input[list] {
@@ -175,8 +76,4 @@ input[list] {
   height: 0px;
   max-width: 272px;
   transition: bottom 0.4s, height 0.4s;
-}
-
-[list]::-webkit-calendar-picker-indicator {
-  opacity: 0;
 }
